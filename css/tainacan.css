@@ -1,0 +1,4 @@
+/* Item list pages */
+.theme-items-list {
+    --tainacan-primary: var(--pallette-color-1, #1a557f);
+}

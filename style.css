@@ -1,0 +1,35 @@
+/**
+ * Theme Name: CTRL+S
+ * Description: Tema do Observatório da Literatura Digital Brasileira
+ * Author: wetah
+ * Template: blocksy
+ * Text Domain: ctrl-s
+ */
+
+
+/* Color and size variables used across site */
+@import "./css/variables.css";
+
+/* Tainacan-related Styles */
+@import "./css/tainacan.css";
+
+/* Custom Block Styles */
+@import "./css/block-styles.css";
+
+/* Títulos tem uma linha por baixo */
+.page-title {
+    position: relative;
+    display: inline-block;
+}
+.page-title::after {
+    content: "";
+    background-color: var(--palette-color-12, #ffd299);
+    width: 108%;
+    height: 28%;
+    display: inline-block;
+    position: absolute;
+    bottom: 14%;
+    z-index: -1;
+    left: -12px;
+}
+
