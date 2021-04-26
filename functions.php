@@ -23,7 +23,7 @@ add_action( 'wp_enqueue_scripts', 'ctrl_s_enqueue_styles_and_scripts');
 
 /* Enqueues block side CSS files */
 function ctrl_s_editor_side_enqueues() {
-	wp_enqueue_style( 'museu-boulieu-editor-styles', get_stylesheet_directory_uri() . '/editor-styles.css', array(), ctrl_s_VERSION );
+	wp_enqueue_style( 'ctrl-s-editor-styles', get_stylesheet_directory_uri() . '/editor-styles.css', array(), CTRL_S_VERSION );
 }
 add_action( 'enqueue_block_editor_assets', 'ctrl_s_editor_side_enqueues');
 
@@ -35,7 +35,7 @@ function ctrl_s_theme_setup() {
 		"family" => "Bebas Neue",
 		"letter-spacing" => "CT_CSS_SKIP_RULE",
 		"line-height" => "1.5",
-		"size" => "40px",
+		"size" => "42px",
 		"text-decoration" => "CT_CSS_SKIP_RULE",
 		"text-transform" => "CT_CSS_SKIP_RULE",
 		"variation" => "n4"
@@ -43,19 +43,19 @@ function ctrl_s_theme_setup() {
 
 	set_theme_mod('h1Typography', $bebas_neue);
 	set_theme_mod('h2Typography', array_merge($bebas_neue, array(
-		"size" => "35px"
+		"size" => "38px"
 	)) );
 	set_theme_mod('h3Typography', array_merge($bebas_neue, array(
-		"size" => "30px"
+		"size" => "34px"
 	)) );
 	set_theme_mod('h4Typography', array_merge($bebas_neue, array(
-		"size" => "25px"
+		"size" => "28px"
 	)) );
 	set_theme_mod('h5Typography', array_merge($bebas_neue, array(
-		"size" => "20px"
+		"size" => "22px"
 	)) );
 	set_theme_mod('h6Typography', array_merge($bebas_neue, array(
-		"size" => "18px"
+		"size" => "20px"
 	)) );
 
 	set_theme_mod('single_blog_post_pageTitleFont', array(
