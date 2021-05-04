@@ -21,7 +21,21 @@
     position: relative;
     display: inline-block;
 }
-.page-title::after {
+.wp-block-getwid-section__inner-content h1 {
+    position: relative;
+    display: inline-block;
+    margin-top: 0px;
+    margin-bottom: 16px;
+    z-index: 999999999999999999999999;
+}
+.wp-block-getwid-section__inner-content p {
+    font-family: Bebas Neue;
+    margin-bottom: 4px;
+    position: relative;
+    z-index: 999999999999999999999999;
+}
+.page-title::after,
+.wp-block-getwid-section__inner-content h1::after {
     content: "";
     background-color: var(--palette-color-12, #ffd299);
     width: 108%;
@@ -32,4 +46,62 @@
     z-index: -1;
     left: -12px;
 }
+.entry-header {
+    align-items: baseline;
+}
 
+/* Links possuem uma linha azul por baixo */
+[data-link="type-3"] .entry-content p > a,
+[data-link="type-3"] .entry-content h1 > a,
+[data-link="type-3"] .entry-content h2 > a,
+[data-link="type-3"] .entry-content h3 > a,
+[data-link="type-3"] .entry-content h4 > a,
+[data-link="type-3"] .entry-content h5 > a,
+[data-link="type-3"] .entry-content h6 > a,
+[data-link="type-3"] .entry-content em > a,
+[data-link="type-3"] .entry-content strong > a,
+[data-link="type-3"] .entry-content > ul a,
+[data-link="type-3"] .entry-content > ol a,
+[data-link="type-3"] .wp-block-column > ul a,
+[data-link="type-3"] .wp-block-column > ol a,
+[data-link="type-3"] [class*="_inner-container"] > ul a,
+[data-link="type-3"] [class*="_inner-container"] > ol a,
+[data-link="type-3"] .gdpr-confirm-policy a {
+    background-image: var(--has-link-decoration, linear-gradient(#9bd1dc, #9bd1dc));
+    background-size: var(--has-link-decoration, 101% 38%);
+}
+[data-link="type-3"] .entry-content p > a:hover,
+[data-link="type-3"] .entry-content h1 > a:hover,
+[data-link="type-3"] .entry-content h2 > a:hover,
+[data-link="type-3"] .entry-content h3 > a:hover,
+[data-link="type-3"] .entry-content h4 > a:hover,
+[data-link="type-3"] .entry-content h5 > a:hover,
+[data-link="type-3"] .entry-content h6 > a:hover,
+[data-link="type-3"] .entry-content em > a:hover,
+[data-link="type-3"] .entry-content strong > a:hover,
+[data-link="type-3"] .entry-content > ul a:hover,
+[data-link="type-3"] .entry-content > ol a:hover,
+[data-link="type-3"] .wp-block-column > ul a:hover,
+[data-link="type-3"] .wp-block-column > ol a:hover,
+[data-link="type-3"] [class*="_inner-container"] > ul a:hover,
+[data-link="type-3"] [class*="_inner-container"] > ol a:hover,
+[data-link="type-3"] .gdpr-confirm-policy a:hover {
+    background-size: var(--has-link-decoration, 101% 102%);
+}
+
+/* Hides swiper lazy loading */
+.swiper-lazy-preloader {
+    animation: none;
+    transform: none;
+    display: none;
+    visibility: hidden;
+}
+
+/* Home has no space above blocks */
+.home .entry-content {
+    --contentSpacing: 0px;
+}
+.home .wp-block-getwid-section__foreground {
+    clip-path: circle(0% at 70% 50%);
+    transition: clip-path 0.1s ease;
+}

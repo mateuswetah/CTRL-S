@@ -18,6 +18,7 @@ const CTRL_S_VERSION = '0.0.1';
 function ctrl_s_enqueue_styles_and_scripts() {
 	wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
 	wp_enqueue_style( 'ctrl-s-style', get_stylesheet_uri(), array('parent-style'), CTRL_S_VERSION );
+	wp_enqueue_script( 'ctrl-s-grid', get_stylesheet_directory_uri() . '/js/ctrl-s-grid.js', array('underscore'), CTRL_S_VERSION );
 }
 add_action( 'wp_enqueue_scripts', 'ctrl_s_enqueue_styles_and_scripts');
 
@@ -27,59 +28,11 @@ function ctrl_s_editor_side_enqueues() {
 }
 add_action( 'enqueue_block_editor_assets', 'ctrl_s_editor_side_enqueues');
 
-/* Child Theme setup */
-function ctrl_s_theme_setup() {
-	
-	/* Set headings font family */
-	$bebas_neue = array(
-		"family" => "Bebas Neue",
-		"letter-spacing" => "CT_CSS_SKIP_RULE",
-		"line-height" => "1.5",
-		"size" => "42px",
-		"text-decoration" => "CT_CSS_SKIP_RULE",
-		"text-transform" => "CT_CSS_SKIP_RULE",
-		"variation" => "n4"
-	);
-
-	set_theme_mod('h1Typography', $bebas_neue);
-	set_theme_mod('h2Typography', array_merge($bebas_neue, array(
-		"size" => "38px"
-	)) );
-	set_theme_mod('h3Typography', array_merge($bebas_neue, array(
-		"size" => "34px"
-	)) );
-	set_theme_mod('h4Typography', array_merge($bebas_neue, array(
-		"size" => "28px"
-	)) );
-	set_theme_mod('h5Typography', array_merge($bebas_neue, array(
-		"size" => "22px"
-	)) );
-	set_theme_mod('h6Typography', array_merge($bebas_neue, array(
-		"size" => "20px"
-	)) );
-
-	set_theme_mod('single_blog_post_pageTitleFont', array(
-		"family" => "Default",
-		"letter-spacing" => "CT_CSS_SKIP_RULE",
-		"line-height" => "CT_CSS_SKIP_RULE",
-		"size" => array(
-			"desktop" => "46px", 
-			"tablet" => "42px",
-			"mobile" => "35px"
-		),
-		"text-decoration" => "CT_CSS_SKIP_RULE",
-		"text-transform" => "CT_CSS_SKIP_RULE",
-		"variation" => "default"
-	) );
-}
-add_action( 'after_setup_theme', 'ctrl_s_theme_setup' );
-
 /* Theme special features */
 function ctrl_s_theme_supported_features() {
 	add_theme_support( 'custom-units', 'px', 'rem', 'em', 'vh', 'vw' );
 }
 add_action( 'after_setup_theme', 'ctrl_s_theme_supported_features' );
-
 
 /* Filters possible Blocksy color palletes */
 function ctrl_s_filter_palette( $args ) {
@@ -153,3 +106,6 @@ require get_stylesheet_directory() . '/inc/block-styles.php';
 
 // Registers Block patterns
 require get_stylesheet_directory() . '/inc/block-patterns.php';
+
+// Presets customizer values
+require get_stylesheet_directory() . '/inc/customizer.php';
