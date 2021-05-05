@@ -45,6 +45,7 @@ function ctrl_s_register_projetos_post_type_and_taxonomy() {
         'has_archive'        => true,
         'hierarchical'       => false,
         'menu_position'      => null,
+        'menu_icon'          => 'dashicons-text-page',
         'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
     );
  
@@ -79,5 +80,22 @@ function ctrl_s_register_projetos_post_type_and_taxonomy() {
     );
  
     register_taxonomy( 'tipo-de-projeto', array( 'projeto' ), $args );
+
+    /* Renames Post labels as Atividades */
+    $get_post_type = get_post_type_object('post');
+    $labels = $get_post_type->labels;
+    $labels->name = __( 'Atividades', 'ctrl-s' );
+    $labels->singular_name = __( 'Atividade', 'ctrl-s' );
+    $labels->add_new = __( 'Adicionar atividades', 'ctrl-s' );
+    $labels->add_new_item = __( 'Adicionar nova atividade', 'ctrl-s' );
+    $labels->edit_item = __( 'Editar atividade', 'ctrl-s' );
+    $labels->new_item = __( 'Nova atividade', 'ctrl-s' );
+    $labels->view_item = __( 'Ver atividade', 'ctrl-s' );
+    $labels->search_items = __( 'Pesquisar atividades', 'ctrl-s' );
+    $labels->not_found = __( 'Nenhuma atividade encontrada', 'ctrl-s' );
+    $labels->not_found_in_trash = __( 'Nenhuma atividade encontrada na lixeira', 'ctrl-s' );
+    $labels->all_items = __( 'Todas as atividades', 'ctrl-s' );
+    $labels->menu_name = __( 'Atividades', 'ctrl-s' );
+    $labels->name_admin_bar = __( 'Atividade', 'ctrl-s' );
 }
 add_action( 'init', 'ctrl_s_register_projetos_post_type_and_taxonomy', 0 );

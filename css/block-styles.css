@@ -3,3 +3,25 @@
     font-family: Bebas Neue, Sans-Serif !important;
     font-size: 72px;
 }
+
+/* Special style for titles */
+.is-style-ctrls-titulo {
+    position: relative;
+    display: inline-block;
+}
+.is-style-ctrls-titulo::before {
+    content: "";
+    background-color: var(--palette-color-12, #ffd299);
+    width: 108%;
+    height: 28%;
+    display: inline-block;
+    position: absolute;
+    bottom: 14%;
+    z-index: -1;
+    left: -12px;
+}
+
+/* Style for complementary sub headings */
+.is-style-ctrls-subheading {
+    font-family: Bebas Neue, Sans-Serif;
+}

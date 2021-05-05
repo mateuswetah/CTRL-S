@@ -24,7 +24,7 @@ add_action( 'wp_enqueue_scripts', 'ctrl_s_enqueue_styles_and_scripts');
 
 /* Enqueues block side CSS files */
 function ctrl_s_editor_side_enqueues() {
-	wp_enqueue_style( 'ctrl-s-editor-styles', get_stylesheet_directory_uri() . '/editor-styles.css', array(), CTRL_S_VERSION );
+	wp_enqueue_style( 'ctrl-s-editor-styles', get_stylesheet_directory_uri() . '/css/block-styles.css', array(), CTRL_S_VERSION );
 }
 add_action( 'enqueue_block_editor_assets', 'ctrl_s_editor_side_enqueues');
 

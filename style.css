@@ -21,21 +21,7 @@
     position: relative;
     display: inline-block;
 }
-.wp-block-getwid-section__inner-content h1 {
-    position: relative;
-    display: inline-block;
-    margin-top: 0px;
-    margin-bottom: 16px;
-    z-index: 999999999999999999999999;
-}
-.wp-block-getwid-section__inner-content p {
-    font-family: Bebas Neue;
-    margin-bottom: 4px;
-    position: relative;
-    z-index: 999999999999999999999999;
-}
-.page-title::after,
-.wp-block-getwid-section__inner-content h1::after {
+.page-title::before {
     content: "";
     background-color: var(--palette-color-12, #ffd299);
     width: 108%;
