@@ -53,3 +53,23 @@
     font-size: 1.125rem;
     list-style: square;
 }
+
+/* Dynamic items list with no images should have less padding */
+.wp-block-tainacan-dynamic-items-list ul.items-list.items-layout-list li.item-list-item,
+.wp-block-tainacan-dynamic-items-list ul.items-list-edit.items-layout-list li.item-list-item {
+    padding: 2px 12px 8px 12px !important;
+    display: list-item !important;
+    line-height: normal !important;
+}
+
+.wp-block-tainacan-dynamic-items-list ul.items-list.items-layout-list li.item-list-item::marker,
+.wp-block-tainacan-dynamic-items-list ul.items-list-edit.items-layout-list li.item-list-item::marker {
+    color: var(--palette-color-7, #f95e05);
+    font-size: 1.5em;
+}
+.wp-block-tainacan-dynamic-items-list ul.items-list.items-layout-list,
+.wp-block-tainacan-dynamic-items-list ul.items-list-edit.items-layout-list {
+    list-style-type: disc !important;
+    padding-left: 1.5em !important;
+    column-gap: 1.875em !important;
+}

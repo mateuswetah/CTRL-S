@@ -101,6 +101,10 @@ function ctrl_s_filter_palette( $args ) {
 }
 add_filter( 'blocksy:editor-color-palette', 'ctrl_s_filter_palette' );
 
+
+// Registers custom projects
+require get_stylesheet_directory() . '/inc/projects.php';
+
 // Registers Block styles
 require get_stylesheet_directory() . '/inc/block-styles.php';
 
