@@ -15,10 +15,11 @@ performWhenDocumentIsLoaded(() => {
             isGalleryVisibileOnScreen = entry.isIntersecting;
         });
     }
-    const observer = new IntersectionObserver(handleIntersection);
-    observer.observe(gallery);
 
     if (gallery&& galleryForeground) {
+
+        const observer = new IntersectionObserver(handleIntersection);
+        observer.observe(gallery);
 
         let updatesCounter = 0;
         function updateMousePosition (mouseEvent) {
