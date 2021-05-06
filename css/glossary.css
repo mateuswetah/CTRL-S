@@ -1,0 +1,24 @@
+.glossary-tooltip .glossary-tooltip-content {
+    background-color: var(--palette-color-5, #dbdbdb);
+    border-radius: none;
+    color: var(--palette-color-4, #000000);
+    border-radius: 0;
+    border-bottom: 48px solid var(--palette-color-14, #ffd299);
+}
+
+.glossary-tooltip a,
+.glossary-underline,
+a.glossary-content-footnote {
+    background-image: linear-gradient(var(--palette-color-14, #ffd299), var(--palette-color-14, #ffd299));
+    background-size: 101% 28%;
+    background-color: transparent !important;
+    background-repeat: no-repeat;
+    background-position: center 80%;
+    color: var(--palette-color4, #000000) !important;
+    transition: background ease 0.2s;
+}
+.glossary-tooltip:hover .glossary-link a,
+.glossary-tooltip:focus .glossary-link a,
+.glossary-tooltip:active .glossary-link a {
+    background-size: 101% 102%;
+}

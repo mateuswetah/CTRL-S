@@ -15,7 +15,7 @@
 
 /* Items list carousels */
 .item-list-item.swiper-slide,
-.wp-block-getwid-post-carousel__post {
+.wp-block-getwid-post-carousel__slide {
     background: var(--background-color, #ffffff);
     padding: 24px;
     border-radius: var(--border-radius, 12px);
@@ -23,6 +23,7 @@
 }
 
 .wp-block-getwid-post-carousel__post-title,
+.slick-list .wp-block-getwid-template-post-title,
 .item-list-item.swiper-slide a>span{
     font-family: Bebas Neue;
     font-size: 1.75rem;
@@ -48,10 +49,16 @@
 
 .wp-block-getwid-section .wp-block-latest-posts.wp-block-latest-posts__list {
     font-size: 1.125rem;
-    list-style: square;
+    list-style-type: disc;
+}
+.wp-block-getwid-custom-post-type.custom-post-type-glossary .wp-block-getwid-custom-post-type__wrapper {
+    font-size: 1.125rem;
+    list-style-type: square;
+    padding-left: 30px;
 }
 
 /* Dynamic items list with no images should have less padding */
+.wp-block-getwid-custom-post-type.custom-post-type-glossary .wp-block-getwid-custom-post-type__post,
 .wp-block-tainacan-dynamic-items-list ul.items-list.items-layout-list li.item-list-item,
 .wp-block-tainacan-dynamic-items-list ul.items-list-edit.items-layout-list li.item-list-item {
     padding: 2px 12px 8px 12px !important;
@@ -59,10 +66,22 @@
     line-height: normal !important;
 }
 
+.wp-block-tainacan-dynamic-items-list ul.items-list.items-layout-list li.item-list-item a:hover,
+.wp-block-tainacan-dynamic-items-list ul.items-list-edit.items-layout-list li.item-list-item a:hover {
+    color: var(--pallete-color-4, #000);
+}
+
+.wp-block-getwid-custom-post-type.custom-post-type-glossary .wp-block-getwid-custom-post-type__post::marker,
 .wp-block-tainacan-dynamic-items-list ul.items-list.items-layout-list li.item-list-item::marker,
 .wp-block-tainacan-dynamic-items-list ul.items-list-edit.items-layout-list li.item-list-item::marker {
     color: var(--palette-color-9, #f95e05);
     font-size: 1.5em;
+}
+.wp-block-getwid-custom-post-type.custom-post-type-glossary .wp-block-getwid-custom-post-type__post a {
+    background: none;
+}
+.wp-block-getwid-custom-post-type.custom-post-type-glossary .wp-block-getwid-custom-post-type__post::marker {
+    font-size: 1.125rem;
 }
 .wp-block-tainacan-dynamic-items-list ul.items-list.items-layout-list,
 .wp-block-tainacan-dynamic-items-list ul.items-list-edit.items-layout-list {
