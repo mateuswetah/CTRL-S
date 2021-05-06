@@ -23,7 +23,7 @@
 }
 .page-title::before {
     content: "";
-    background-color: var(--palette-color-12, #ffd299);
+    background-color: var(--palette-color-14, #ffd299);
     width: 108%;
     height: 28%;
     display: inline-block;
@@ -55,6 +55,7 @@
 [data-link="type-3"] .gdpr-confirm-policy a {
     background-image: var(--has-link-decoration, linear-gradient(#9bd1dc, #9bd1dc));
     background-size: var(--has-link-decoration, 101% 38%);
+    transition: background ease 0.3s;
 }
 [data-link="type-3"] .entry-content p > a:hover,
 [data-link="type-3"] .entry-content h1 > a:hover,
@@ -94,6 +95,5 @@
 
 .home .ct-sticky-container div[data-transparent-row="yes"] {
     opacity: 0;
-    display: none;
     visibility: hidden;
 }

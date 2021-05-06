@@ -16,8 +16,8 @@ if ( function_exists('register_block_style') ) {
         register_block_style(
             'core/heading',
             array(
-                'name'  => 'ctrls-titulo', 'ctrl-s',
-                'label' =>  'Títulos do CTRL+S',
+                'name'  => 'ctrls-titulo',
+                'label' =>  __('Títulos do CTRL+S', 'ctrl-s'),
                 'isDefault' => true,
             )
         );
@@ -25,9 +25,27 @@ if ( function_exists('register_block_style') ) {
         register_block_style(
             'core/paragraph',
             array(
-                'name'  => 'ctrls-subheading', 'ctrl-s',
-                'label' =>  'Fonte dos títulos do CTRL+S',
+                'name'  => 'ctrls-subheading',
+                'label' =>  __('Fonte dos títulos do CTRL+S', 'ctrl-s'),
                 'isDefault' => false,
+            )
+        );
+
+        register_block_style(
+            'core/button',
+            array(
+                'name'  => 'ctrls-button',
+                'label' =>  __('Botão estilo link do CTRL+S', 'ctrl-s'),
+                'isDefault' => true,
+            )
+        );
+
+        register_block_style(
+            'core/button',
+            array(
+                'name'  => 'ctrls-button-light',
+                'label' =>  __('Botão estilo link do CTRL+S (claro)', 'ctrl-s'),
+                'isDefault' => true,
             )
         );
     }

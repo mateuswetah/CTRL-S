@@ -2,9 +2,6 @@
 .tainacan-collection-header__box .hero-section[data-type="type-1"] {
     margin-bottom: 4px;
 }
-.theme-items-list {
-    --tainacan-primary: var(--pallette-color-1, #1a557f);
-}
 .theme-items-list #items-list-area #items-list-results .tainacan-cards-container .tainacan-card .metadata-label,
 .theme-items-list #items-list-area #items-list-results .tainacan-cards-container .tainacan-card .metadata-value,
 .theme-items-list #items-list-area #items-list-results .tainacan-list-container .tainacan-list .metadata-label,
@@ -64,7 +61,7 @@
 
 .wp-block-tainacan-dynamic-items-list ul.items-list.items-layout-list li.item-list-item::marker,
 .wp-block-tainacan-dynamic-items-list ul.items-list-edit.items-layout-list li.item-list-item::marker {
-    color: var(--palette-color-7, #f95e05);
+    color: var(--palette-color-9, #f95e05);
     font-size: 1.5em;
 }
 .wp-block-tainacan-dynamic-items-list ul.items-list.items-layout-list,

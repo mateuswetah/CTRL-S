@@ -1,7 +1,7 @@
 /* Page title on editor side */
 .editor-post-title__block .editor-post-title__input {
     font-family: Bebas Neue, Sans-Serif !important;
-    font-size: 72px;
+    font-size: 64px;
 }
 
 /* Special style for titles */
@@ -11,7 +11,7 @@
 }
 .is-style-ctrls-titulo::before {
     content: "";
-    background-color: var(--palette-color-12, #ffd299);
+    background-color: var(--palette-color-14, #ffd299);
     width: 108%;
     height: 28%;
     display: inline-block;
@@ -24,4 +24,56 @@
 /* Style for complementary sub headings */
 .is-style-ctrls-subheading {
     font-family: Bebas Neue, Sans-Serif;
+}
+
+/* Style for buttons as links */
+.is-style-ctrls-button .wp-block-button__link,
+.is-style-ctrls-button:hover .wp-block-button__link,
+.is-style-ctrls-button:focus .wp-block-button__link {
+    font-family: Bebas Neue, Sans-Serif !important;
+    font-weight: normal;
+    background-image: linear-gradient(var(--palette-color-12,#9bd1dc), var(--palette-color-12,#9bd1dc));
+    background-size: 101% 50%;
+    background-color: transparent !important;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    color: var(--palette-color4, #000000) !important;
+    font-size: 1.875rem !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0;
+    padding: 0.12em 0.4em 0.04em 0.4em !important;
+    min-height: unset;
+    height: unset;
+    line-height: normal !important;
+    transition: background ease 0.3s;
+}
+.is-style-ctrls-button:hover .wp-block-button__link {
+    background-size: 101% 104%;
+}
+
+/* Style for buttons as links in darker backgrounds */
+.is-style-ctrls-button-light .wp-block-button__link,
+.is-style-ctrls-button-light:hover .wp-block-button__link,
+.is-style-ctrls-button-light:focus .wp-block-button__link {
+    font-family: Bebas Neue, Sans-Serif !important;
+    font-weight: normal;
+    background-image: linear-gradient(var(--palette-color-11, #7baccd), var(--palette-color-11,#7baccd));
+    background-size: 101% 50%;
+    background-color: transparent !important;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    color: var(--palette-color5, #ffffff) !important;
+    font-size: 1.875rem !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0;
+    padding: 0.12em 0.4em 0.04em 0.4em !important;
+    min-height: unset;
+    height: unset;
+    line-height: normal !important;
+    transition: background ease 0.3s;
+}
+.is-style-ctrls-button-light:hover .wp-block-button__link {
+    background-size: 101% 104%;
 }
